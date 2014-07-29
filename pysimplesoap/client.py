@@ -267,7 +267,7 @@ class SoapClient(object):
         if self.services:
             soap_action = str(self.action)
         else:
-            soap_action = str(self.action) + method
+            soap_action = str(self.action) #+ method TODO: Workaround to work with Jasper without using WSDL. See  https://code.google.com/p/pysimplesoap/issues/detail?id=152
 
         headers = {
             'Content-type': 'text/xml; charset="UTF-8"',
