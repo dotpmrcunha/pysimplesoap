@@ -220,7 +220,7 @@ class SoapClient(object):
         if self.services:
             soap_action = str(self.action)
         else:
-            soap_action = str(self.action) + method
+            soap_action = str(self.action) #+ method TODO no WSDL Hack
 
         headers = {
             'Content-type': 'text/xml; charset="UTF-8"',
