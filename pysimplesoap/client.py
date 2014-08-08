@@ -466,7 +466,7 @@ class SoapClient(object):
         REVERSE_TYPE_MAP['string'] = str
 
         # Open uri and read xml:
-        xml = fetch(url, self.http, cache, force_download, self.wsdl_basedir)
+        xml = fetch(url, self.http, cache, force_download, self.wsdl_basedir, self.http_headers)
         # Parse WSDL XML:
         wsdl = SimpleXMLElement(xml, namespace=wsdl_uri)
 
